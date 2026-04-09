@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fde4ec;
+    color: #444;
+}
+
+header {
+    background-color: #f47ca0;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.banner {
+    background: linear-gradient(to right, #f9a8c4, #fbc2d4);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    font-size: 24px;
+}
+
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.personagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.personagem {
+    background-color: #f9bfd0;
+    padding: 15px;
+    border-radius: 15px;
+    width: 160px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.personagem span {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: #f9bfd0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #f4b6c2;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #f47ca0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f47ca0;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
