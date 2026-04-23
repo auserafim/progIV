@@ -1,0 +1,87 @@
+:root {
+    --primary: #e63946; /* Vermelho Circus */
+    --secondary: #457b9d; /* Azul Digital */
+    --accent: #f1faee;
+    --dark: #1d3557;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--accent);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid yellow;
+}
+
+h1, h2 {
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+}
+
+/* Flexbox no Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* Transition obrigatória */
+}
+
+nav a:hover {
+    color: yellow;
+    transform: scale(1.2) rotate(5deg); /* Efeito visual */
+}
+
+/* Grid Layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid var(--secondary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #2b2d42;
+}
+
+th, td {
+    border: 1px solid var(--secondary);
+    padding: 10px;
+    text-align: left;
+}
+
+#glitch-btn {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}

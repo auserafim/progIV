@@ -7,10 +7,10 @@
 body {
     background: #0a0a0a;
     color: #ff0000;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     overflow: hidden;
     /* Cursor personalizado (obrigatório) */
-    cursor: crosshair; 
+    cursor: crosshair;
 }
 
 #game-container {
@@ -23,7 +23,7 @@ body {
 }
 
 .game-title {
-    font-family: 'Nosifer', cursive;
+    font-family: "Nosifer", cursive;
     font-size: 3rem;
     margin-top: 20px;
     text-shadow: 0 0 10px #ff0000;
@@ -71,8 +71,14 @@ body {
 }
 
 @keyframes spawn {
-    from { transform: scale(0) rotate(180deg); opacity: 0; }
-    to { transform: scale(1) rotate(0deg); opacity: 1; }
+    from {
+        transform: scale(0) rotate(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 /* Efeito de Rastro (Partícula de Sangue) */
@@ -87,5 +93,27 @@ body {
 }
 
 @keyframes drip {
-    to { transform: translateY(50px); opacity: 0; }
+    to {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #fff, #f472b6, transparent);
+    filter: blur(1px);
+    animation: fadeOut 0.5s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
 }
