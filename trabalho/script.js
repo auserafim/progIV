@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mainTitle.textContent = "Bem-vindo ao Vazio"; // Título original
             document.body.style.backgroundColor = ""; // Cor original
             document.body.style.filter = ""; // Remove o efeito
+             newFact.textContent = ""; // Remove o fato adicionado
+             factList.removeChild(newFact); // Remove o elemento da lista
             
             // Remove o botão de desabstrair após o uso
             undoBtn.remove();
@@ -34,8 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Caine: OPA! Alguém tocou no que não devia!");
     });
 
-    const table = document.querySelector('table');
+    const table = document.querySelector('.personagens-table');
+    const message =  document.createElement('p');
+    message.style.fontStyle = 'italic';
+    message.style.color = 'gray';
+    table.parentNode.insertBefore(message, table.nextSibling);
     table.addEventListener('mouseenter', () => {
-        console.log("Inspecionando dados dos prisioneiros...");
+        message.textContent = "Caine: Hmmm, parece que alguém está curioso sobre os prisioneiros...";
+    });
+
+    table.addEventListener('mouseleave', () => {
+        message.textContent = "";
     });
 });

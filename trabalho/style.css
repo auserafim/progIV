@@ -43,7 +43,7 @@ nav a {
 
 nav a:hover {
     color: yellow;
-    transform: scale(1.2) rotate(5deg); /* Efeito visual */
+    transform: scale(7.2) rotate(20deg); /* Efeito visual */
 }
 
 /* Grid Layout */
@@ -65,7 +65,7 @@ main {
 }
 
 .info-box img {
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
     margin-bottom: 10px;
     height: auto;
@@ -92,4 +92,14 @@ th, td {
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#historia {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary);
+    margin: 20px;
 }
