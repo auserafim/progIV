@@ -61,6 +61,14 @@ main {
     padding: 15px;
     border-radius: 10px;
     border-left: 5px solid var(--secondary);
+    margin: 20px; 
+}
+
+.info-box img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: auto;
 }
 
 table {
