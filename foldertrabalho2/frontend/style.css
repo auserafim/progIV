@@ -1,8 +1,8 @@
 :root {
-    --primary: #826AED; /* Vermelho Circus */
+    --primary: #826aed; /* Vermelho Circus */
     --secondary: #ce941f; /* Azul Digital */
     --accent: #f1faee;
-    --dark: #C879FF;
+    --dark: #c879ff;
 }
 
 body {
@@ -26,7 +26,6 @@ h2 {
     text-transform: uppercase;
 }
 
-/* Flexbox no Menu */
 nav ul {
     display: flex;
     justify-content: center;
@@ -44,17 +43,22 @@ nav a {
 
 nav a:hover {
     color: yellow;
-    transform: scale(0.2) rotate(20deg);
+    transform: scale(1.2) rotate(5deg);
 }
 
-/* Grid Layout */
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 40px;
     max-width: 1000px;
     margin: auto;
+}
+
+#app-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
 }
 
 .info-box {
@@ -62,7 +66,7 @@ main {
     padding: 15px;
     border-radius: 10px;
     border-left: 5px solid var(--secondary);
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .info-box img {
@@ -86,13 +90,16 @@ td {
     text-align: left;
 }
 
-.info-box:hover{
+.info-box:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
-#glitch-btn {
+#glitch-btn,
+#logout-btn {
     background: yellow;
     color: black;
     border: none;
@@ -102,6 +109,11 @@ td {
     border-radius: 5px;
 }
 
+#logout-btn {
+    background: #e63946;
+    color: white;
+}
+
 #historia {
     display: flex;
     flex-direction: column;
@@ -109,5 +121,43 @@ td {
     padding: 20px;
     border-radius: 10px;
     border-left: 5px solid var(--primary);
-    margin: 20px;
+}
+
+/* --- NEW AUTHENTICATION STYLES --- */
+.auth-box {
+    background: #2b2d42;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-box input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.auth-box button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.auth-box button:hover {
+    background: var(--secondary);
 }

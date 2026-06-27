@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ContentModule } from './content/content.module'; // <-- Deixe apenas UMA linha desta
+import { ContentModule } from './content/content.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { ContentModule } from './content/content.module'; // <-- Deixe apenas UM
       synchronize: true,
     }),
     ContentModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
