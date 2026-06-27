@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Digital Circus Wiki</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1 id="main-title">THE AMAZING DIGITAL CIRCUS</h1>
+            <nav>
+                <ul>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#regras">Regras do Caine</a></li>
+                    <li><a href="#listadeEpisodios">Lista de Episódios</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="login-section" class="auth-box">
+                <h2>Acesso Restrito ao Sistema</h2>
+                <p>Insira suas credenciais para acessar os dados do Vazio.</p>
+                <form id="login-form">
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        required
+                    />
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Senha"
+                        required
+                    />
+                    <button type="submit">Autenticar</button>
+                </form>
+                <p id="login-error" style="color: red; display: none">
+                    Credenciais inválidas ou servidor offline.
+                </p>
+            </section>
+
+            <div id="app-content" style="display: none">
+                <article id="historia">
+                    <h2>História do Circo</h2>
+                    <section id="sinopse">
+                        <h3>Sinopse e Contexto Histórico</h3>
+                        <p>
+                            O <strong>Incrível Circo Digital</strong> (The
+                            Amazing Digital Circus) é uma comédia de humor
+                            sombrio que começa quando uma humana, ao vestir um
+                            headset de realidade virtual, é transportada para um
+                            plano digital permanente. Ao chegar, ela descobre
+                            que seu corpo físico desapareceu e seu nome foi
+                            apagado, sendo rebatizada como
+                            <strong>Pomni</strong> por Caine.
+                        </p>
+                    </section>
+                    <section id="caine-simulacro">
+                        <h3>O Simulacro de Caine</h3>
+                        <p>
+                            O circo é governado por <strong>Caine</strong>, uma
+                            Inteligência Artificial instável. Ele organiza
+                            "aventuras" diárias para manter os residentes
+                            ocupados, alegando que o entretenimento é a única
+                            forma de preservar a sanidade. No entanto, sua
+                            incapacidade de compreender a psicologia humana
+                            torna essas aventuras perigosas e exaustivas.
+                        </p>
+                    </section>
+                    <section id="vazio-saida">
+                        <h3>O Vazio e a Saída Inexistente</h3>
+                        <p>
+                            Não há botão de "Sair". O mapa é cercado pelo
+                            <strong>Vazio</strong> — uma zona não renderizada
+                            que causa danos sensoriais. A busca por uma "Porta
+                            de Saída" costuma levar a labirintos infinitos de
+                            escritórios vazios que terminam no próprio Vazio,
+                            uma armadilha psicológica para os prisioneiros.
+                        </p>
+                    </section>
+                    <section id="abstracao">
+                        <h3>A Abstração: O Fim da Linha</h3>
+                        <p>
+                            O maior perigo não são os monstros, mas a
+                            <strong>Abstração</strong>. Quando um humano atinge
+                            seu limite psicológico e perde a esperança, seu
+                            avatar sofre uma corrupção de dados irreversível.
+                        </p>
+                    </section>
+
+                    <h2>Personagens</h2>
+                    <div id="character-container">
+                        <p style="text-align: center; color: yellow">
+                            Carregando dados do servidor...
+                        </p>
+                    </div>
+                </article>
+
+                <section id="personagens">
+                    <h2>Elenco de Prisioneiros</h2>
+                    <div class="grid-container">
+                        <table class="personagens-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Espécie</th>
+                                    <th>Sanidade</th>
+                                </tr>
+                            </thead>
+                            <tbody id="character-table-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="listadeEpisodios">
+                                    <h2>Guia de Episódios — Temporada 1</h2>
+                                    <table class="wiki-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nº</th>
+                                                <th>Título</th>
+                                                <th>Data de Lançamento</th>
+                                                <th>Resumo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="episode-table-body">
+                                            <tr>
+                                                <td colspan="4" style="text-align: center; color: yellow;">
+                                                    Carregando episódios do servidor...
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section
+
+                <section>
+                    <ol id="regras">
+                        <h2>Regras do Caine</h2>
+                        <h3>
+                            Para manter a "sanidade" e o bom funcionamento do
+                            Circo, as seguintes diretrizes são estritamente
+                            observadas:
+                        </h3>
+                        <li>
+                            Não mencione, não olhe e não tente entrar no Vazio.
+                            O que não foi renderizado não deve ser discutido.
+                        </li>
+                        <li>
+                            Saiba que Caine está sempre observando. A
+                            privacidade é uma ilusão que não foi programada
+                            neste mundo.
+                        </li>
+                        <li>
+                            Bubble não deve ser ingerido. O ajudante de Caine é
+                            composto por substâncias incompatíveis com a
+                            integridade do seu avatar.
+                        </li>
+                        <li>
+                            Não tente fugir. O Vazio é um espaço fechado e
+                            qualquer tentativa de escapar resultará em
+                            consequências imprevisíveis, incluindo a possível
+                            "abstração" (perda total da sanidade).
+                        </li>
+                        <li>
+                            Respeite os outros prisioneiros. A cooperação é
+                            essencial para a sobrevivência, embora as dinâmicas
+                            sociais possam ser complicadas e voláteis.
+                        </li>
+                        <li>
+                            Não questione as regras. As diretrizes de Caine são
+                            absolutas e qualquer desafio a elas pode levar a
+                            punições severas, incluindo a "abstração".
+                        </li>
+                    </ol>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <button id="logout-btn" style="display: none; margin-bottom: 10px">
+                ENCERRAR SESSÃO
+            </button>
+            <button id="glitch-btn">ABSTRAIR SISTEMA</button>
+            <p>&copy; 2026 - Digital Circus Fan Wiki</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

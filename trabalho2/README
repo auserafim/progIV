@@ -1,0 +1,52 @@
+To insert a user:
+
+sudo docker compose -f compose.yaml exec db psql -U nestuser -d content_db -c "INSERT INTO users (email, password_hash) VALUES ('admin@circus.com', '123456');"
+
+
+To view tables: \dt
+
+To query data: SELECT * FROM contents;
+
+To update data: UPDATE contents SET title = 'Novo Titulo' WHERE display_order = 1;
+
+To exit the shell: \q
+
+
+to insert the characters
+
+docker-compose exec db psql -U nestuser -d content_db
+INSERT INTO contents (title, content, image_url, display_order) VALUES
+('Pomni', 'A protagonista boba da corte. Sua mente está em frangalhos enquanto ela procura obsessivamente por uma saída que não existe.', 'https://static.wikia.nocookie.net/tadc/images/8/82/GlitchWebsitePomniRender.png', 1),
+('Caine', 'O mestre de cerimônias de IA. Ele é excêntrico, instável e tecnicamente o "antagonista" por manter todos presos, embora ache que está apenas proporcionando diversão.', 'https://static.wikia.nocookie.net/tadc/images/5/59/Caine.webp/revision/latest?cb=20231111180810&path-prefix=pt-br', 2),
+('Jax', 'Um coelho roxo cínico e impulsivo. Ele encontra prazer no caos e em atormentar os outros membros do circo para aliviar o próprio tédio.', 'https://static.wikia.nocookie.net/tadc/images/c/ce/Jax_Render.png/revision/latest?cb=20260403023356', 3),
+('Ragatha', 'Uma boneca de pano que tenta manter a fachada de otimismo e sanidade, apesar de estar tão aterrorizada quanto os outros.', 'https://static.wikia.nocookie.net/tadc/images/8/8e/Ragatha_%28Render%29.png/revision/latest/scale-to-width-down/1000?cb=20260422203340', 4),
+('Kinger', 'Uma peça de xadrez (Rei) e o residente mais antigo. Ele é extremamente paranoico e propenso a surtos de instabilidade mental.', 'https://static.wikia.nocookie.net/tadc/images/f/f5/King.webp/revision/latest?cb=20240525212809', 5),
+('Gangle', 'Um ser feito de fitas que troca entre máscaras de comédia e tragédia. Ela é frágil e frequentemente tem sua máscara de alegria quebrada por Jax.', 'https://static.wikia.nocookie.net/tadc/images/c/cb/Ribbon_transparent.png/revision/latest?cb=20260425192800', 6),
+('Zooble', 'Um personagem composto por peças geométricas intercambiáveis. Zooble é indiferente, irritável e não tem o menor interesse nas atividades de Caine.', 'https://static.wikia.nocookie.net/tadc/images/f/f0/Random.webp/revision/latest?cb=20240526190431', 7);
+
+
+
+-- Garante que os personagens já inseridos tenham a categoria correta
+UPDATE contents SET category = 'character' WHERE category IS NULL;
+
+-- Insere os episódios (Hack: usando image_url para armazenar a Data!)
+INSERT INTO contents (title, content, image_url, display_order, category) VALUES
+('Piloto', 'Pomni entra no Circo Digital e fica presa em um corpo de boba da corte enquanto busca desesperadamente uma saída.', '13 Out 2023', 1, 'episode'),
+('Caos no Transportador de Doces!', 'Caine envia o grupo para o Reino do Cânion de Doces para perseguir bandidos e recuperar um carregamento.', '03 Mai 2024', 2, 'episode'),
+('O Mistério da Mansão Mildenhall', 'Uma exploração sombria em uma mansão misteriosa que força os personagens a confrontarem traumas.', '04 Out 2024', 3, 'episode'),
+('Mascarada de Fast Food', 'O grupo trabalha em um restaurante terrível sob a gerência de Gangle.', '13 Dez 2024', 4, 'episode'),
+('Sem Título', 'Uma rodada relâmpago de mini-aventuras sugeridas pelos próprios membros do circo.', '20 Jun 2025', 5, 'episode'),
+('Todos Ganham Armas', 'Um concurso de popularidade de Caine que acaba saindo do controle com o uso de armas.', '15 Ago 2025', 6, 'episode'),
+('Episódio de Praia', 'Um dia de descanso que revela segredos obscuros sobre a natureza do circo.', '12 Dez 2025', 7, 'episode'),
+('hjsakldfhl', 'O sistema começa a colapsar e a confiança em Caine é totalmente quebrada.', '20 Mar 2026', 8, 'episode'),
+('O Último Ato', 'A conclusão da temporada onde a verdade final sobre o Circo Digital é revelada.', '19 Jun 2026', 9, 'episode');
+
+
+
+
+UPDATE contents SET especie = 'Boba da Corte', sanidade = '0% (Instável)' WHERE title = 'Pomni';
+UPDATE contents SET especie = 'Coelho', sanidade = '100% (Caótico)' WHERE title = 'Jax';
+UPDATE contents SET especie = 'Boneca de Pano', sanidade = '80% (Tentando)' WHERE title = 'Ragatha';
+UPDATE contents SET especie = 'Humanóide', sanidade = '100% (O mais estável)' WHERE title = 'Gangle';
+UPDATE contents SET especie = 'Rei de Xadrez Antropomórfico', sanidade = '80% (Tentando)' WHERE title = 'Kinger';
+UPDATE contents SET especie = 'Brinquedo Antropomórfico', sanidade = '80% (Tentando)' WHERE title = 'Zooble';
