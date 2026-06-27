@@ -1,0 +1,113 @@
+:root {
+    --primary: #826AED; /* Vermelho Circus */
+    --secondary: #ce941f; /* Azul Digital */
+    --accent: #f1faee;
+    --dark: #C879FF;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--accent);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid yellow;
+}
+
+h1,
+h2 {
+    font-family: "Bungee", cursive;
+    text-transform: uppercase;
+}
+
+/* Flexbox no Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    color: yellow;
+    transform: scale(0.2) rotate(20deg);
+}
+
+/* Grid Layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid var(--secondary);
+    margin: 20px;
+}
+
+.info-box img {
+    width: 40%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #2b2d42;
+}
+
+th,
+td {
+    border: 1px solid var(--secondary);
+    padding: 10px;
+    text-align: left;
+}
+
+.info-box:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#glitch-btn {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#historia {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary);
+    margin: 20px;
+}
